@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App/App";
 import reportWebVitals from "./reportWebVitals";
+import "antd/dist/antd.css";
+import "antd/es/date-picker/style/css"; // for css
 
 ReactDOM.render(
   <React.StrictMode>
