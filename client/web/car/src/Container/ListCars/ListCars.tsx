@@ -36,7 +36,7 @@ const ListCars: FC = () => {
         title={car.title}
         description={car.description}
         visibility={visibility}
-        onOk={onOkOrOnCancel}
+        onOk={() => {}}
         onCancel={onOkOrOnCancel}
       />
       <div className="cars">
