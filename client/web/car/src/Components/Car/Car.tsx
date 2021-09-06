@@ -9,11 +9,12 @@ interface CarPorps {
   title: string;
   descritpion: string;
   img: string;
+  onClick?: React.MouseEventHandler<HTMLDivElement> | undefined;
 }
 
-const Car: FC<CarPorps> = ({ id, descritpion, title, img }) => {
+const Car: FC<CarPorps> = ({ id, descritpion, title, img, onClick }) => {
   return (
-    <div style={{ margin: "auto", marginTop: 30 }}>
+    <div style={{ margin: "auto", marginTop: 30 }} onClick={onClick}>
       <Card
         style={{ width: 350, minHeight: 400 }}
         hoverable
