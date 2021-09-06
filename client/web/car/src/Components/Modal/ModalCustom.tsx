@@ -1,6 +1,7 @@
-import { Modal } from "antd";
-import React, { FC } from "react";
-import { Typography } from "antd";
+import { Divider, Modal, Typography } from "antd";
+import React, { FC, useEffect, useState } from "react";
+import { userList } from "../../Lib/users";
+import User from "../User";
 const { Text } = Typography;
 
 interface ModalProps {
@@ -24,6 +25,16 @@ const ModalCustom: FC<ModalProps> = ({
   onCancel,
   onOk,
 }) => {
+  const [users, setUsers] = useState<any>();
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await userList();
+      setUsers(data as any);
+    };
+    getData();
+  }, []);
+
   return (
     <Modal
       title={title}
@@ -44,6 +55,17 @@ const ModalCustom: FC<ModalProps> = ({
         }}
       />
       <Text type="secondary">{description}</Text>
+      <Divider />
+      {users?.map((user: any, index: number) => {
+        return (
+          <User
+            key={index}
+            name={user?.name ?? ""}
+            username={user?.name?.substring(0, 2)}
+            commentary={user?.body}
+          />
+        );
+      })}
     </Modal>
   );
 };
