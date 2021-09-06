@@ -1,10 +1,12 @@
 import { Modal } from "antd";
 import React, { FC } from "react";
+import { Typography } from "antd";
+const { Text } = Typography;
 
 interface ModalProps {
   id: string;
   title: string;
-  descritpion: string;
+  description: string;
   img: string;
   visibility: boolean;
   onCancel?:
@@ -15,7 +17,7 @@ interface ModalProps {
 
 const ModalCustom: FC<ModalProps> = ({
   id,
-  descritpion,
+  description,
   title,
   img,
   visibility,
@@ -24,16 +26,24 @@ const ModalCustom: FC<ModalProps> = ({
 }) => {
   return (
     <Modal
-      title="Modal 1000px width"
+      title={title}
       centered
       width={500}
       visible={visibility}
       onCancel={onCancel}
       onOk={onOk}
     >
-      <p>some contents...</p>
-      <p>some contents...</p>
-      <p>some contents...</p>
+      <img
+        src={img}
+        alt={title}
+        style={{
+          padding: 10,
+          height: 250,
+          width: "100%",
+          objectFit: "contain",
+        }}
+      />
+      <Text type="secondary">{description}</Text>
     </Modal>
   );
 };

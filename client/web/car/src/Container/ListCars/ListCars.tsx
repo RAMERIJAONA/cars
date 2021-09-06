@@ -34,7 +34,7 @@ const ListCars: FC = () => {
         id={car.id}
         img={car.img}
         title={car.title}
-        descritpion={car.description}
+        description={car.description}
         visibility={visibility}
         onOk={onOkOrOnCancel}
         onCancel={onOkOrOnCancel}
