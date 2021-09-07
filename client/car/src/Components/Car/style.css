@@ -1,0 +1,17 @@
+.metaClass .ant-card-meta-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.container {
+  margin: "auto";
+  margin-top: 30;
+}
+
+.card {
+  width: 350;
+  min-height: 400;
+}
