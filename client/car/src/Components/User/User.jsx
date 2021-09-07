@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { Avatar } from "antd";
 import Title from "antd/lib/typography/Title";
 import { Typography } from "antd";

@@ -1,5 +1,4 @@
 import React from "react";
-import { FC } from "react";
 import { Card } from "antd";
 import Meta from "antd/lib/card/Meta";
 import "./style.css";

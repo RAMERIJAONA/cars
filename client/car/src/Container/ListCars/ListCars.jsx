@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, {  useState } from "react";
 import Car from "../../Components/Car";
 import ModalCustom from "../../Components/Modal";
 import { cars } from "../../Lib/carsData";
