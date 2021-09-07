@@ -4,6 +4,7 @@ import React, { FC, useEffect, useState } from "react";
 import Scrollbars from "react-custom-scrollbars";
 import { userList } from "../../Lib/users";
 import User from "../User";
+import "./style.css";
 const { Text } = Typography;
 
 interface ModalProps {
@@ -70,7 +71,7 @@ const ModalCustom: FC<ModalProps> = ({
           );
         })}
       </Scrollbars>
-      <div style={{ marginTop: 10 }}>
+      <div className="scroll">
         <TextArea rows={4} placeholder={"Votre commentaire..."} />
       </div>
     </Modal>
